@@ -1,13 +1,10 @@
-﻿using AspProMongoDb.WebApp.Entities;
+﻿using AspProMongoDb.WebApp.Common;
+using AspProMongoDb.WebApp.Entities;
 
 namespace AspProMongoDb.WebApp.Services
 {
-    public interface IUserService
+    public interface IUserService:IBaseService<User>
     {
-        void Insert(User user);
-        void Update(User user);
-        void Delete(Guid userId);
-        User GetById(Guid userId);
-        List<User> GetUsers();
+       
     }
 }

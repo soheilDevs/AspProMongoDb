@@ -1,3 +1,4 @@
+using AspProMongoDb.WebApp.DataBase;
 using AspProMongoDb.WebApp.Models;
 using AspProMongoDb.WebApp.Services;
 using Microsoft.Extensions.Options;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 services.AddRazorPages();
 services.AddScoped<IUserService, UserService>();
-
+services.AddScoped<MongoDbContext>();
 services.Configure<MongoSettings>(
     builder.Configuration.GetSection("MongoSettings"));
 

@@ -1,11 +1,10 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using AspProMongoDb.WebApp.Common;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace AspProMongoDb.WebApp.Entities
 {
-    public class User
+    public class User:BaseEntity
     {
-        [BsonId]
-        public Guid Id { get; set; }
         [BsonElement("name")]
         public string Name { get; set; }
         public string Family { get; set; }
